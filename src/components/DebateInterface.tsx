@@ -48,7 +48,7 @@ const DebateInterface: React.FC<DebateInterfaceProps> = ({
     
     try {
       const aiPosition = userPosition === 'for' ? 'against' : 'for';
-      const initialMessage = {
+      const initialMessage: MessageType = {
         id: Date.now().toString(),
         content: await generateAiResponse(topic, aiPosition, 'introduction', ''),
         sender: 'ai',
